@@ -10,7 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 app.use(
   cors({
-    origin: "https://intern-frontend-9x6l.onrender.com",
+    origin: "https://intern-frontend-five.vercel.app/",
     credentials: true,
   })
 );
