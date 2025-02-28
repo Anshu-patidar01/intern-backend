@@ -14,7 +14,7 @@ const userAuth = async (req, res, next) => {
       return res.status(401).send("Unauthorized...!");
     }
 
-    const decoded = jwt.verify(token, process.env.SECRETKEY);
+    const decoded = jwt.verify(token, "wedsqrf");
     const user = await userModel.findById({ _id: decoded.UserId });
 
     // console.log(user);

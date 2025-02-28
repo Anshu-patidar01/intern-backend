@@ -11,7 +11,7 @@ Router.post("/validate-token", async (req, res) => {
   const { token } = req.body;
 
   try {
-    const decoded = jwt.verify(token, process.env.SECRETKEY);
+    const decoded = jwt.verify(token, "wedsqrf");
     const isValidToken = await UserModel.findById({ _id: decoded.UserId });
     // console.log(isValidToken);
     if (!isValidToken) {
